@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thinkit</title>
+  <script defer src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <header class="bg-green-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Thinkit</h1>
+    <button id="cartBtn" class="relative bg-white text-green-700 px-4 py-2 rounded hover:bg-green-100 transition">
+      🛒 Cart
+      <span id="cartCount" class="ml-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">0</span>
+    </button>
+  </header>
+
+  <!-- Sale Banner -->
+  <div class="bg-yellow-300 text-center py-2 text-lg font-semibold text-black shadow-inner">
+    🎉 60% OFF on all groceries! Limited time only! 🎉
+  </div>
+
+  <!-- Main Grid -->
+  <main class="p-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+    <!-- Product cards rendered by JS -->
+  </main>
+
+  <!-- Cart Sidebar -->
+  <aside id="cartSidebar"
+         class="fixed top-0 right-0 w-80 max-w-full h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50 flex flex-col">
+
+    <div class="p-4 border-b flex justify-between items-center">
+      <h2 class="text-xl font-bold">Your Cart</h2>
+      <button id="closeCart" class="text-gray-600 text-2xl hover:text-red-500">&times;</button>
+    </div>
+
+    <div id="cartItems" class="p-4 flex-1 overflow-y-auto space-y-4"></div>
+
+    <div class="p-4 border-t">
+      <div id="cartTotal" class="text-right font-semibold text-lg mb-2">Total: ₹0</div>
+      <button class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">Checkout</button>
+    </div>
+  </aside>
+
+</body>
+</html>
