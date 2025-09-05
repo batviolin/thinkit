@@ -14,6 +14,7 @@ const items = [
   { name: "Sugar", price: 45, image: "sugar.jpg" },
   { name: "Wheat-Flour", price: 90, image: "wheat-flour.jpg" },
   { name: "Yoghurt", price: 45, image: "yogurt.jpg" },
+  { name: "Coca Cola", price: 75, image: "coke.jpg"}
 ];
 
 let cart = {};
@@ -134,3 +135,4 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("cartBtn").addEventListener("click", openCart);
   document.getElementById("closeCart").addEventListener("click", closeCart);
 });
+
